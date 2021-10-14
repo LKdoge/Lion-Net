@@ -30,7 +30,6 @@ const Search = styled('div')(({ theme }) => ({
     marginLeft: theme.spacing(2),
     width: 'auto',
   },
-  marginRight: 10,
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
@@ -59,7 +58,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
-
 
 export default function NavBar({ component : Component }) {
   return (
@@ -112,6 +110,7 @@ export default function NavBar({ component : Component }) {
         </Link>
 
         <Search sx={{ float: 'right' }}>
+          
           <SearchIconWrapper>
               <SearchIcon />
           </SearchIconWrapper>
@@ -120,6 +119,7 @@ export default function NavBar({ component : Component }) {
               inputProps={{ 'aria-label': 'Buscar' }}
           />
         </Search>
+
       </Stack>
       <Component></Component>
     </>
