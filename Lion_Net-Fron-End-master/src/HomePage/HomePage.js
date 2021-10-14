@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { Fragment } from 'react';
+import Box from '@mui/material/Box';
 
 import ZoosBlog from './ZoosBlog.js';
 import Carousel from './Carousel.js';
+import Schedule from './Schedule.js';
 
 // import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 // import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
@@ -11,10 +13,11 @@ import Carousel from './Carousel.js';
 
 function HomePage() {
   return (
-    <Fragment>
+    <Box sx={{ backgroundColor: 'primary.dark', width: '80%', margin: 'auto'}}>
       <Carousel />
       <ZoosBlog />
-    </Fragment>
+      <Schedule />
+    </Box>
   );
 }
 
