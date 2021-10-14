@@ -6,6 +6,7 @@ import Divider from '@mui/material/Divider';
 
 import Routes from './Routes.js';
 import Search from './Search.js';
+import Footer from '../Footer/Footer.js';
 
 export default function NavBar({ component : Component }) {
   return (
@@ -22,8 +23,8 @@ export default function NavBar({ component : Component }) {
         <Routes />
         <Search />
       </Stack>
-      <Component></Component>
-
+      <Component />
+      <Footer />
     </>
   );
 }
