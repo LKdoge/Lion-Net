@@ -1,20 +1,20 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
+
+import { styled, alpha } from '@mui/material/styles';
+import InputBase from '@mui/material/InputBase';
+import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+
 import PetsIcon from '@mui/icons-material/Pets';
 import OtherHousesIcon from '@mui/icons-material/OtherHouses';
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
-import { styled, alpha } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Typography from '@mui/material/Typography';
-import InputBase from '@mui/material/InputBase';
-
-import HomePage from '../HomePage/HomePage.js';
-import Habitats from '../Habitats/Habitats.js';
-
+import InfoIcon from '@mui/icons-material/Info';
+// import { bgcolor } from '@mui/system';
+import Lion from '../img/Lion.svg';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -61,45 +61,67 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 
-function pathChange(path){
-  return window.location.replace(´${}´);
-}
-export default function NavBar() {
-    const [value, setValue] = React.useState(0);
+export default function NavBar({ component : Component }) {
   return (
-    <Box sx={{ flexGrow: 1}}>
-      <AppBar position="static">
-            <BottomNavigation
-                showLabels
-                value={value}
-                onChange={(event, newValue) => {
-                setValue(newValue);
-                }}
-                >
-                <BottomNavigationAction label="Inicio" icon={<HomeIcon />} onClick={()=>window.location.replace("/")}/>
-                <BottomNavigationAction label="Habitats" icon={<OtherHousesIcon />} onClick={()=>window.location.replace("/aboutus")}/>
-                <BottomNavigationAction label="Animales" icon={<PetsIcon />} />
-                <BottomNavigationAction label="Acerca de" icon={<LocationOnIcon />} />
-                <Typography
-                    variant="h6"
-                    noWrap
-                    component="div"
-                    sx={{ flexGrow: 2, display: { xs: 'none', sm: 'block' }, color: 'black', marginTop:'10px'}}
-                >
-                
-                </Typography>
+    <>
+      <Stack direction="row" spacing={2} divider={<Divider orientation="vertical" flexItem /> }
+      sx={{
+        mx: 'auto',
+        p: 1,
+        m: 2,
+        textAlign: 'center',
+        justifyContent: 'center',
+      }}
+      >
+        <Link to="/">
+          <IconButton aria-label="Lion Net" sx={{overflow: 'hidden', height: '45px', width: '45px'}}>
+            <Box
+              component="img"
+              sx={{
+                height: '85px',
+                width: '85px',
+              }}
+              src={Lion}
+              alt={"Lion Net"}>
+            </Box>
+          </IconButton>
+        </Link>
 
-                <Search>
-                <SearchIconWrapper>
-                    <SearchIcon />
-                </SearchIconWrapper>
-                <StyledInputBase
-                    placeholder="Buscar"
-                    inputProps={{ 'aria-label': 'Buscar' }}
-                />
-                </Search>
-            </BottomNavigation>
-      </AppBar>
-    </Box>
+        <Link to="/">
+          <IconButton aria-label="Home" sx={{ color: 'black' }}>
+            <HomeIcon />
+          </IconButton>
+        </Link>
+
+        <Link to="/habitats">
+          <IconButton aria-label="Habitats" sx={{ color: 'black' }}>
+            <OtherHousesIcon />
+          </IconButton>
+        </Link>
+
+        <Link to="/animals">
+          <IconButton aria-label="Animals" sx={{ color: 'black' }}>
+            <PetsIcon />
+          </IconButton>
+        </Link>
+
+        <Link to="/aboutus">
+          <IconButton aria-label="About us" sx={{ color: 'black' }}>
+            <InfoIcon />
+          </IconButton>
+        </Link>
+
+        <Search sx={{ float: 'right' }}>
+          <SearchIconWrapper>
+              <SearchIcon />
+          </SearchIconWrapper>
+          <StyledInputBase
+              placeholder="Buscar"
+              inputProps={{ 'aria-label': 'Buscar' }}
+          />
+        </Search>
+      </Stack>
+      <Component></Component>
+    </>
   );
 }
