@@ -65,6 +65,7 @@ export default function Carousel() {
 
     return(
         <Box sx={{ flexGrow: 1 }}>
+
         {/* <Paper
           square
           elevation={0}
@@ -120,20 +121,24 @@ export default function Carousel() {
               disabled={activeStep === maxSteps - 1}
             >
               Next
+
               {/* {theme.direction === 'rtl' ? (
                 <KeyboardArrowLeft />
               ) : (
                 <KeyboardArrowRight />
               )} */}
+
             </Button>
           }
           backButton={
             <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+
               {/* {theme.direction === 'rtl' ? (
                 <KeyboardArrowRight />
               ) : (
                 <KeyboardArrowLeft />
               )} */}
+
               Back
             </Button>
           }
@@ -149,12 +154,14 @@ function MediaCard({tittle: Tittle, text: Text, image: Image}) {
         position: 'absolute',
         transform: "translate( 20%, -125%)"
         }}>
+          
       <CardMedia
         component="img"
         height="140"
         image={Image}
         alt="green iguana"
       />
+
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
             {Tittle}
@@ -163,6 +170,7 @@ function MediaCard({tittle: Tittle, text: Text, image: Image}) {
             {Text}
         </Typography>
       </CardContent>
+
       <CardActions>
         <Button size="small">Share</Button>
         <Button size="small">Learn More</Button>

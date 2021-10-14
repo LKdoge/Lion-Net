@@ -1,2 +1,2 @@
 export default function Footer (){
-    return (<>Footer</>)}
+    return (<>Puto el que lo lea</>)}

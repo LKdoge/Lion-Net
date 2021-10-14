@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Fragment } from 'react';
 import Box from '@mui/material/Box';
 
 import ZoosBlog from './ZoosBlog.js';
@@ -13,7 +12,7 @@ import Schedule from './Schedule.js';
 
 function HomePage() {
   return (
-    <Box sx={{ backgroundColor: 'primary.dark', width: '80%', margin: 'auto'}}>
+    <Box sx={{ width: '80%', margin: 'auto'}}>
       <Carousel />
       <ZoosBlog />
       <Schedule />
