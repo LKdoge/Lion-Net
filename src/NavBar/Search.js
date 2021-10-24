@@ -11,7 +11,6 @@ const SearchDiv = styled('div')(({ theme }) => ({
     },
     width: '100%',
     height: '80%',
-    marginTop: 5,
     [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(2),
       width: 'auto',
@@ -48,7 +47,7 @@ const SearchDiv = styled('div')(({ theme }) => ({
 export default function Search(){
 
 return (
-        <SearchDiv sx={{ float: 'right' }}>
+        <SearchDiv sx={{ height:'40px', marginTop : '50px' }}>
             <SearchIconWrapper>
                 <SearchIcon />
             </SearchIconWrapper>
