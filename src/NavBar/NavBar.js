@@ -14,7 +14,7 @@ export default function NavBar({ component : Component }) {
     <>
       <Box sx={{
           height: '80px',
-          backgroundColor: '#005E42',
+          backgroundColor: '#ED9E46',
       }}>
         <Stack direction="row" spacing={2} divider={<Divider orientation="vertical" flexItem /> }
           sx={{
@@ -25,7 +25,13 @@ export default function NavBar({ component : Component }) {
           <Search />
         </Stack>
       </Box>
-      <Component />
+
+      <Box sx={{backgroundColor:'#F0F0EB', marginTop: '0px'}}>
+        <Box sx={{width: '80%', margin: 'auto', minHeight: '800px'}}>
+          <Component />
+        </Box>
+      </Box>
+
       <Footer />
     </>
   );

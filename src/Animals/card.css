@@ -1,0 +1,75 @@
+.containerCard {
+    background: #eee;
+    margin: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    float: left;
+  }
+  .card {
+    overflow: hidden;
+    display: flex;
+    width: 200px;
+    height: 280px;
+    background: #202731;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px -2px #999;
+    flex-direction: column;
+    transition: all .3s ease;
+    transform-style: preserve-3d;
+  }
+  .card .imgAnimal {
+    /* background: url('https://images.unsplash.com/photo-1634581448750-22a591d78099?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1632&q=80'); */
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    height: 40%;
+    transition: all .4s ease;
+  }
+  .card:hover .imgAnimal{
+    background-size: 170%;
+  }
+  .card:hover {
+    box-shadow: 10px 10px 26px -6px #999;
+  }
+  .animalDescription{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 7px;
+  }
+  .animalDescription > *{
+    padding: .5rem !important;
+  }
+  .animalNombre{
+    background: #202731;
+    color: #FAF566;
+    font-weight: 600;
+    letter-spacing: .6px;
+    text-align: center;
+    padding: 4px;
+  }
+  .animalAge{
+    display: flex;
+  }
+  .animalAge > *{
+    background: darkcyan;
+    color: #eee;
+    padding: 4px;
+    border-radius: 4px;
+  }
+  .animalAge{
+    background: #9ACFDD;
+    text-align: center !important;
+    display: block;
+  }
+  .updateAnimal{
+    background: #FAF566 !important;
+    color: #202731 !important;
+    font-weight: 600;
+    letter-spacing: .6px;
+    text-align: center;
+  }
+  
