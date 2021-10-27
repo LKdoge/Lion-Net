@@ -9,9 +9,9 @@
   .card {
     overflow: hidden;
     display: flex;
-    width: 200px;
-    height: 280px;
-    background: #202731;
+    width: 380px;
+    height: 400px;
+    background: #FFFFF4;
     border-radius: 10px;
     box-shadow: 1px 1px 6px -2px #999;
     flex-direction: column;
